@@ -79,3 +79,41 @@
 .button-cont button:hover {
   opacity: 0.9;
 }
+
+
+@media (max-width: 600px) {
+  .card-container {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .text-cont {
+    padding: 10px;
+    font-size: 0.95rem;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .button-cont {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .button-cont button {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .title-card {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .counter {
+    position: static;
+    margin-top: 5px;
+  }
+}
