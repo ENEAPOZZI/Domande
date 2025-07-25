@@ -1,0 +1,65 @@
+@import url(../../../styles.scss);
+
+.storico-container {
+  padding: 20px;
+  font-family: 'Goldman', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  color: white;
+}
+
+.card-partita {
+  border: 2px solid rgb(5, 196, 248);
+  border-radius: 20px;
+  padding: 15px 30px;
+  background-color: #111;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 300px;
+
+  h3 {
+    color: yellow;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 5px 0;
+  }
+}
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-data {
+  font-family: 'Goldman', sans-serif;
+  color: yellow;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.bottone {
+  margin-top: 30px;
+  padding: 10px 30px;
+  border: 2px solid var(--secondary-color);
+  background-color: transparent;
+  color: white;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    color: black;
+  }
+
+}

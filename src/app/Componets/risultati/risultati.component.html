@@ -1,0 +1,7 @@
+  <h3>Quiz terminato!</h3>
+  <p>Risposte giuste: {{ domandeGiuste.length }}</p>
+  <p>Risposte sbagliate: {{ domandeSbagliate.length }}</p>
+  <div class="bottoni-container">
+    <button (click)="onReset()" class="bottone">Reset</button>
+    <button  routerLink="/storico" class="bottone">Match History</button>
+  </div>

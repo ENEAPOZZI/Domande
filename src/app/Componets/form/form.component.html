@@ -1,0 +1,41 @@
+<form (ngSubmit)="onSubmit()" #quizForm="ngForm">
+
+  <div class="contenitoreInput">
+
+    <label>
+      Number of questions:
+      <input
+      type="number"
+      name="amount"
+      [(ngModel)]="formData.amount"
+      required
+      min="1"
+      max="50"
+      required
+      />
+    </label>
+
+  </div>
+
+  <div class="contenitoreInput">
+
+    <label>
+      Difficulty :
+      <select name="difficulty" [(ngModel)]="formData.difficulty" required>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </label>
+
+  </div>
+
+  <div class="contenitoreInput">
+
+    <button type="submit">Get Questions</button>
+
+  </div>
+
+</form>
+
+

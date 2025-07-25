@@ -1,0 +1,28 @@
+@import url(../../../styles.scss);
+
+.bottone {
+  margin-top: 30px;
+  padding: 10px 30px;
+  border: 2px solid var(--secondary-color);
+  background-color: transparent;
+  color: white;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    color: black;
+  }
+
+}
+
+
+.bottoni-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}

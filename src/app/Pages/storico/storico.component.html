@@ -1,0 +1,21 @@
+<div class="container my-4">
+  <div *ngIf="storico.length > 0; else noPartite">
+    <div class="row g-4">
+      <div
+        class="col-12 col-md-6 col-lg-4"
+        *ngFor="let partita of storico; let i = index"
+      >
+        <div class="card-partita p-3 h-100">
+          <h3>Partita {{ i + 1 }}</h3>
+          <p>✅ Giuste: {{ partita.giuste }}</p>
+          <p>❌ Sbagliate: {{ partita.sbagliate }}</p>
+          <button routerLink="/home" class="btn btn-outline-info mt-2 w-100">Back to home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noPartite>
+    <p class="no-data text-center mt-5">Nessuna partita registrata.</p>
+  </ng-template>
+</div>

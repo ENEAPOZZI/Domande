@@ -1,0 +1,20 @@
+@import url(../styles.scss);
+
+:host {
+  display: block;
+  height: 100vh;
+  background-color: var(--primary-bk-color);
+  color: white;
+  overflow: auto;
+}
+
+
+.container{
+  text-align: center;
+  padding-top:20px ;
+}
+
+
+body{
+  overflow: auto;
+}

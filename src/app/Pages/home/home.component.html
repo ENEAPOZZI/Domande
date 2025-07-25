@@ -1,0 +1,39 @@
+
+<div class="form" *ngIf="!domande|| domande.length === 0">
+  <app-form (domandeGenerate)="riceviDomande($event)" (formStatus)="riceviMessaggioErrore($event)"></app-form>
+</div>
+
+<div *ngIf="formErrorMessage" class="formmex">
+  <h4>{{formErrorMessage}}</h4>
+</div>
+
+<div class="domande-wrapper">
+
+
+  <div class="domanda-container">
+
+    <div *ngIf="!domande|| domande.length === 0">
+      <app-istruzioni></app-istruzioni>
+    </div>
+
+    <app-domanda
+      *ngIf="domande && domande[currentIndex] && !showResult"
+      [domanda]="domande[currentIndex]"
+      [currentIndex]="currentIndex"
+      [totale]="domande.length"
+      (rispostaSelezionata)="rispondi($event, domande[currentIndex])"
+    ></app-domanda>
+
+
+    <app-risultati
+      *ngIf="showResult"
+      [domandeGiuste]="domandeGiuste"
+      [domandeSbagliate]="domandeSbagliate"
+      (resetEvent)="reset()"
+    ></app-risultati>
+  </div>
+
+
+
+</div>
+

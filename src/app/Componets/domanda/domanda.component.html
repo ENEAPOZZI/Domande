@@ -1,0 +1,20 @@
+<div class="card-container">
+
+  <div class="title-card">
+    <p class="logo-title">QuizMaster</p>
+    <h3 class="counter" >{{ currentIndex + 1 }} / {{ totale }}</h3>
+  </div>
+
+  <div class="domanda">
+    <div class="text-cont">
+      <p>{{ domanda.question| decodeHtml }}</p>
+    </div>
+
+    <div class="button-cont">
+      <button (click)="rispondi('True')">True</button>
+      <button (click)="rispondi('False')">False</button>
+    </div>
+
+  </div>
+
+</div>
