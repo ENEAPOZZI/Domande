@@ -106,14 +106,19 @@
   }
 
   .title-card {
+    display: flex;
     flex-direction: column;
     height: auto;
     margin-bottom: 15px;
     text-align: center;
   }
 
+  .logo-title{
+    display: block;
+  }
+
   .counter {
-    position: static;
+    display: block;
     margin-top: 5px;
   }
 }
