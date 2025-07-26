@@ -7,8 +7,37 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  background-color: black;
+  background-color: rgb(213, 95, 95);
   color: white;
+}
+
+.title-container {
+  position: relative;
+
+  h2.title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    color: var(--primary-color);
+  }
+
+  .button {
+  padding: 3px 10px;
+  border: 2px solid var(--secondary-color);
+  background-color: transparent;
+  color: white;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    color: black;
+  }
+
+}
 }
 
 .card-partita {
@@ -29,7 +58,20 @@
     font-weight: bold;
     margin: 5px 0;
   }
+
+  &.bordo-verde {
+    border-color: #00c851;
+  }
+
+  &.bordo-rosso {
+    border-color: #ff4444;
+  }
+
+  &.bordo-blu {
+    border-color: rgb(5, 196, 248);
+  }
 }
+
 
 .card-container{
   display: flex;
@@ -45,21 +87,15 @@
 }
 
 
-.bottone {
-  margin-top: 30px;
-  padding: 10px 30px;
-  border: 2px solid var(--secondary-color);
-  background-color: transparent;
-  color: white;
-  border-radius: 30px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
 
-  &:hover {
-    background-color: var(--secondary-color);
-    color: black;
+  @media (max-width: 576px) {
+    h2.title {
+      font-size: 1.4rem;
+    }
+
+    .button {
+      font-size: 0.9rem;
+      padding: 2px 8px;
+    }
   }
 
-}

@@ -1,16 +1,34 @@
 <div class="container my-4">
+
+   <div class="title-container d-flex justify-content-between align-items-center mb-4">
+
+    <button routerLink="/home" class="button">Go back</button>
+
+    <h2 class="title text-center m-0 flex-grow-1">Match History</h2>
+
+    <div style="width: 105px;"></div>
+  </div>
+
   <div *ngIf="storico.length > 0; else noPartite">
     <div class="row g-4">
-      <div class="col-12 col-md-6 col-lg-4 card-container" *ngFor="let partita of storico; let i = index">
+    <div
+  class="col-12 col-md-6 col-lg-4 card-container"
+  *ngFor="let partita of storico; let i = index"
+>
+  <div
+    class="card-partita p-3 h-100"
+    [ngClass]="{
+      'bordo-verde': partita.giuste > partita.sbagliate,
+      'bordo-rosso': partita.giuste < partita.sbagliate,
+      'bordo-blu': partita.giuste === partita.sbagliate
+    }"
+  >
+    <h3>Partita {{ i + 1 }}</h3>
+    <p>✅ Giuste: {{ partita.giuste }}</p>
+    <p>❌ Sbagliate: {{ partita.sbagliate }}</p>
+  </div>
+</div>
 
-        <div class="card-partita p-3 h-100">
-          <h3>Partita {{ i + 1 }}</h3>
-          <p>✅ Giuste: {{ partita.giuste }}</p>
-          <p>❌ Sbagliate: {{ partita.sbagliate }}</p>
-          <button routerLink="/home" class="btn btn-outline-info mt-2 w-100">Back to home</button>
-        </div>
-
-      </div>
     </div>
   </div>
 
