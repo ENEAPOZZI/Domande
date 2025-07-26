@@ -56,7 +56,7 @@
 
   p {
     font-weight: bold;
-    margin: 5px 0;
+    margin: 8px 0;
   }
 
   &.bordo-verde {
@@ -69,6 +69,11 @@
 
   &.bordo-blu {
     border-color: rgb(5, 196, 248);
+  }
+
+  .totali-text{
+    color:var(--secondary-color);
+    font-size: 22px;
   }
 }
 
